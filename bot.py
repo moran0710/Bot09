@@ -1,12 +1,14 @@
 import nonebot
 from nonebot.adapters.onebot.v11 import Adapter as ONEBOT_V11Adapter
 from time import time
+import os
 
 nonebot.init(
     start_time=time(),
-    superusers={"3575331055"},
-    command_start={"/", ""},
+    command_start={"/"},
     command_sep={".", " "},
+    tarot_path=os.path.join(".", "bot09", "tarot", "resource"),
+    fortune_path=os.path.join(".", "bot09", "fortune", "resource")
 )
 
 driver = nonebot.get_driver()
